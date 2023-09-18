@@ -5,8 +5,8 @@ from typing import Optional
 import joblib
 import numpy as np
 import pandas as pd
-from xgboost import XGBRegressor
 from sklearn.exceptions import NotFittedError
+from xgboost import XGBRegressor
 
 warnings.filterwarnings("ignore")
 
@@ -61,7 +61,6 @@ class Regressor:
             gamma=self.gamma,
             max_depth=self.max_depth,
             verbosity=0,
-            **kwargs,
         )
         return model
 
